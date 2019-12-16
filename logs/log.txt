@@ -1,0 +1,519 @@
+2019-12-15 14:43:07 WARN  ConnectionUtil:21 - Unable to obtain connection to database
+java.sql.SQLException: No suitable driver found for jdbc:postgresq3://localhost:5432/postgres
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:19)
+	at com.revature.repositories.UserDAOImpl.getAllUsers(UserDAOImpl.java:25)
+	at com.revature.repositories.UserDAOImpl.getAllUsersPassword(UserDAOImpl.java:57)
+	at com.revature.services.UserService.getAllUsersPassword(UserService.java:41)
+	at com.revature.Driver.conformPassword(Driver.java:449)
+	at com.revature.Driver.createUser(Driver.java:82)
+	at com.revature.Driver.start(Driver.java:48)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 14:44:30 WARN  ConnectionUtil:21 - Unable to obtain connection to database
+java.sql.SQLException: No suitable driver found for jdbc:postgres://localhost:5432/postgres
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:19)
+	at com.revature.repositories.UserDAOImpl.getAllUsers(UserDAOImpl.java:25)
+	at com.revature.repositories.UserDAOImpl.getAllUsersPassword(UserDAOImpl.java:57)
+	at com.revature.services.UserService.getAllUsersPassword(UserService.java:41)
+	at com.revature.Driver.conformPassword(Driver.java:449)
+	at com.revature.Driver.createUser(Driver.java:82)
+	at com.revature.Driver.start(Driver.java:48)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 14:45:28 WARN  ConnectionUtil:21 - Unable to obtain connection to database
+java.sql.SQLException: No suitable driver found for jdbc:postgres://localhost:5432/postgres
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:19)
+	at com.revature.repositories.UserDAOImpl.getAllUsers(UserDAOImpl.java:25)
+	at com.revature.repositories.UserDAOImpl.getAllUsersPassword(UserDAOImpl.java:57)
+	at com.revature.services.UserService.getAllUsersPassword(UserService.java:41)
+	at com.revature.Driver.conformPassword(Driver.java:449)
+	at com.revature.Driver.createUser(Driver.java:82)
+	at com.revature.Driver.start(Driver.java:48)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 14:49:34 WARN  UserDAOImpl:93 - Unable to add  account
+org.postgresql.util.PSQLException: No value specified for parameter 2.
+	at org.postgresql.core.v3.SimpleParameterList.checkAllParametersSet(SimpleParameterList.java:264)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:294)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.AccountDAOImpl.addAccount(AccountDAOImpl.java:89)
+	at com.revature.services.AccountServices.addAccount(AccountServices.java:24)
+	at com.revature.Driver.createUser(Driver.java:102)
+	at com.revature.Driver.start(Driver.java:48)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 14:49:34 WARN  UserDAOImpl:175 - Unable to retrieve the account by Pin Number
+org.postgresql.util.PSQLException: ERROR: column "pin_number" does not exist
+  Hint: Perhaps you meant to reference the column "account.pinnumber".
+  Position: 36
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:108)
+	at com.revature.repositories.AccountDAOImpl.getAccountIdBYPinNumber(AccountDAOImpl.java:162)
+	at com.revature.services.AccountServices.getAccountBYPinNumber(AccountServices.java:36)
+	at com.revature.Driver.createUser(Driver.java:103)
+	at com.revature.Driver.start(Driver.java:48)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 14:51:55 WARN  UserDAOImpl:93 - Unable to add  account
+org.postgresql.util.PSQLException: ERROR: column "account_number" of relation "account" does not exist
+  Position: 23
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.AccountDAOImpl.addAccount(AccountDAOImpl.java:89)
+	at com.revature.services.AccountServices.addAccount(AccountServices.java:24)
+	at com.revature.Driver.createUser(Driver.java:102)
+	at com.revature.Driver.start(Driver.java:48)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 14:51:55 WARN  UserDAOImpl:175 - Unable to retrieve the account by Pin Number
+org.postgresql.util.PSQLException: ERROR: column "pin_number" does not exist
+  Hint: Perhaps you meant to reference the column "account.pinnumber".
+  Position: 36
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:108)
+	at com.revature.repositories.AccountDAOImpl.getAccountIdBYPinNumber(AccountDAOImpl.java:162)
+	at com.revature.services.AccountServices.getAccountBYPinNumber(AccountServices.java:36)
+	at com.revature.Driver.createUser(Driver.java:103)
+	at com.revature.Driver.start(Driver.java:48)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 14:53:38 WARN  UserDAOImpl:93 - Unable to add  account
+org.postgresql.util.PSQLException: ERROR: null value in column "created_on" violates not-null constraint
+  Detail: Failing row contains (1, 0, 0, 1, null).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.AccountDAOImpl.addAccount(AccountDAOImpl.java:89)
+	at com.revature.services.AccountServices.addAccount(AccountServices.java:24)
+	at com.revature.Driver.createUser(Driver.java:102)
+	at com.revature.Driver.start(Driver.java:48)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 14:53:38 WARN  UserDAOImpl:175 - Unable to retrieve the account by Pin Number
+org.postgresql.util.PSQLException: ERROR: column "pin_number" does not exist
+  Hint: Perhaps you meant to reference the column "account.pinnumber".
+  Position: 36
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:108)
+	at com.revature.repositories.AccountDAOImpl.getAccountIdBYPinNumber(AccountDAOImpl.java:162)
+	at com.revature.services.AccountServices.getAccountBYPinNumber(AccountServices.java:36)
+	at com.revature.Driver.createUser(Driver.java:103)
+	at com.revature.Driver.start(Driver.java:48)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 14:54:38 WARN  UserDAOImpl:93 - Unable to add  account
+org.postgresql.util.PSQLException: ERROR: null value in column "created_on" violates not-null constraint
+  Detail: Failing row contains (2, 0, 0, 1, null).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.AccountDAOImpl.addAccount(AccountDAOImpl.java:89)
+	at com.revature.services.AccountServices.addAccount(AccountServices.java:24)
+	at com.revature.Driver.createUser(Driver.java:102)
+	at com.revature.Driver.start(Driver.java:48)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 14:54:38 WARN  UserDAOImpl:175 - Unable to retrieve the account by Pin Number
+org.postgresql.util.PSQLException: ERROR: column "pin_number" does not exist
+  Hint: Perhaps you meant to reference the column "account.pinnumber".
+  Position: 36
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:108)
+	at com.revature.repositories.AccountDAOImpl.getAccountIdBYPinNumber(AccountDAOImpl.java:162)
+	at com.revature.services.AccountServices.getAccountBYPinNumber(AccountServices.java:36)
+	at com.revature.Driver.createUser(Driver.java:103)
+	at com.revature.Driver.start(Driver.java:48)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 14:56:34 WARN  UserDAOImpl:93 - Unable to add  account
+org.postgresql.util.PSQLException: ERROR: null value in column "created_on" violates not-null constraint
+  Detail: Failing row contains (3, 0, 0, 1, null).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.AccountDAOImpl.addAccount(AccountDAOImpl.java:89)
+	at com.revature.services.AccountServices.addAccount(AccountServices.java:24)
+	at com.revature.Driver.createUser(Driver.java:102)
+	at com.revature.Driver.start(Driver.java:48)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 14:59:57 WARN  UserDAOImpl:121 - Unable to add user
+org.postgresql.util.PSQLException: ERROR: column "fname" of relation "users" does not exist
+  Position: 20
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.UserDAOImpl.addUser(UserDAOImpl.java:117)
+	at com.revature.services.UserService.addUser(UserService.java:21)
+	at com.revature.Driver.start(Driver.java:49)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 15:06:29 WARN  UserDAOImpl:121 - Unable to add user
+org.postgresql.util.PSQLException: ERROR: column "fname" of relation "users" does not exist
+  Position: 20
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.UserDAOImpl.addUser(UserDAOImpl.java:117)
+	at com.revature.services.UserService.addUser(UserService.java:21)
+	at com.revature.Driver.start(Driver.java:49)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 15:15:56 WARN  UserDAOImpl:122 - Unable to add user
+org.postgresql.util.PSQLException: ERROR: column "account_id" of relation "users" does not exist
+  Position: 59
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.UserDAOImpl.addUser(UserDAOImpl.java:118)
+	at com.revature.services.UserService.addUser(UserService.java:21)
+	at com.revature.Driver.start(Driver.java:49)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 15:18:33 WARN  UserDAOImpl:122 - Unable to add user
+org.postgresql.util.PSQLException: ERROR: column "account_id" of relation "users" does not exist
+  Position: 59
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.UserDAOImpl.addUser(UserDAOImpl.java:118)
+	at com.revature.services.UserService.addUser(UserService.java:21)
+	at com.revature.Driver.start(Driver.java:49)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 15:21:19 WARN  UserDAOImpl:122 - Unable to add user
+org.postgresql.util.PSQLException: ERROR: column "account_id" of relation "users" does not exist
+  Position: 59
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.UserDAOImpl.addUser(UserDAOImpl.java:118)
+	at com.revature.services.UserService.addUser(UserService.java:21)
+	at com.revature.Driver.start(Driver.java:49)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 15:25:11 WARN  UserDAOImpl:283 - Unable to retrieve the user by using first name and password
+org.postgresql.util.PSQLException: ERROR: column "fname" does not exist
+  Position: 34
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:108)
+	at com.revature.repositories.UserDAOImpl.getUserByFnameAndPassword(UserDAOImpl.java:265)
+	at com.revature.services.UserService.getUserByFnameAndPassword(UserService.java:45)
+	at com.revature.Driver.getUserFromDB(Driver.java:120)
+	at com.revature.Driver.start(Driver.java:53)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 15:31:36 WARN  UserDAOImpl:283 - No such user exists.
+org.postgresql.util.PSQLException: ERROR: column "fname" does not exist
+  Position: 34
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:108)
+	at com.revature.repositories.UserDAOImpl.getUserByFnameAndPassword(UserDAOImpl.java:265)
+	at com.revature.services.UserService.getUserByFnameAndPassword(UserService.java:45)
+	at com.revature.Driver.getUserFromDB(Driver.java:120)
+	at com.revature.Driver.start(Driver.java:53)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 15:35:30 WARN  UserDAOImpl:122 - Unable to add user
+org.postgresql.util.PSQLException: ERROR: column "account_id" of relation "users" does not exist
+  Position: 59
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.UserDAOImpl.addUser(UserDAOImpl.java:118)
+	at com.revature.services.UserService.addUser(UserService.java:21)
+	at com.revature.Driver.start(Driver.java:49)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 15:39:49 WARN  UserDAOImpl:122 - Unable to add user
+org.postgresql.util.PSQLException: ERROR: column "is_logged_in" of relation "users" does not exist
+  Position: 91
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.UserDAOImpl.addUser(UserDAOImpl.java:118)
+	at com.revature.services.UserService.addUser(UserService.java:21)
+	at com.revature.Driver.start(Driver.java:49)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 15:51:45 WARN  UserDAOImpl:122 - Unable to add user
+org.postgresql.util.PSQLException: ERROR: column "account_id" of relation "users" does not exist
+  Position: 59
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.UserDAOImpl.addUser(UserDAOImpl.java:118)
+	at com.revature.services.UserService.addUser(UserService.java:21)
+	at com.revature.Driver.start(Driver.java:49)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 15:55:28 WARN  UserDAOImpl:122 - Unable to add user
+org.postgresql.util.PSQLException: ERROR: column "account_id" of relation "users" does not exist
+  Position: 59
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.UserDAOImpl.addUser(UserDAOImpl.java:118)
+	at com.revature.services.UserService.addUser(UserService.java:21)
+	at com.revature.Driver.start(Driver.java:49)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 15:56:03 WARN  UserDAOImpl:122 - Unable to add user
+org.postgresql.util.PSQLException: ERROR: column "account_id" of relation "users" does not exist
+  Position: 59
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.UserDAOImpl.addUser(UserDAOImpl.java:118)
+	at com.revature.services.UserService.addUser(UserService.java:21)
+	at com.revature.Driver.start(Driver.java:49)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 15:58:32 WARN  UserDAOImpl:122 - Unable to add user
+org.postgresql.util.PSQLException: ERROR: column "account_id" of relation "users" does not exist
+  Position: 59
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.UserDAOImpl.addUser(UserDAOImpl.java:118)
+	at com.revature.services.UserService.addUser(UserService.java:21)
+	at com.revature.Driver.start(Driver.java:49)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 16:06:39 WARN  UserDAOImpl:122 - Unable to add user
+org.postgresql.util.PSQLException: ERROR: column "account_id" of relation "users" does not exist
+  Position: 59
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.UserDAOImpl.addUser(UserDAOImpl.java:118)
+	at com.revature.services.UserService.addUser(UserService.java:21)
+	at com.revature.Driver.start(Driver.java:49)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 16:09:06 WARN  UserDAOImpl:122 - Unable to add user
+org.postgresql.util.PSQLException: ERROR: column "account_id" of relation "users" does not exist
+  Position: 59
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.UserDAOImpl.addUser(UserDAOImpl.java:118)
+	at com.revature.services.UserService.addUser(UserService.java:21)
+	at com.revature.Driver.start(Driver.java:49)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 16:15:58 WARN  UserDAOImpl:215 - Unable to retrieve user's account
+org.postgresql.util.PSQLException: The column name accountId was not found in this ResultSet.
+	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2607)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2498)
+	at com.revature.repositories.UserDAOImpl.getUserAccount(UserDAOImpl.java:205)
+	at com.revature.services.UserService.getUserAccount(UserService.java:33)
+	at com.revature.Driver.deposit(Driver.java:362)
+	at com.revature.Driver.logIn(Driver.java:155)
+	at com.revature.Driver.start(Driver.java:56)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-15 16:18:44 WARN  UserDAOImpl:202 - Unable to update the account balance
+org.postgresql.util.PSQLException: ERROR: column "account_number" of relation "account" does not exist
+  Position: 28
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.AccountDAOImpl.updateBalanceOfAccount(AccountDAOImpl.java:198)
+	at com.revature.services.AccountServices.updateBalanceOfAccount(AccountServices.java:40)
+	at com.revature.Driver.deposit(Driver.java:363)
+	at com.revature.Driver.logIn(Driver.java:155)
+	at com.revature.Driver.start(Driver.java:56)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-16 14:04:46 WARN  UserDAOImpl:70 - Unable to retrieve the account
+org.postgresql.util.PSQLException: The column name account_number was not found in this ResultSet.
+	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2607)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2498)
+	at com.revature.repositories.AccountDAOImpl.getAccountById(AccountDAOImpl.java:61)
+	at com.revature.services.AccountServices.getAccountById(AccountServices.java:20)
+	at com.revature.Driver.transfer(Driver.java:394)
+	at com.revature.Driver.logIn(Driver.java:163)
+	at com.revature.Driver.start(Driver.java:56)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-16 14:12:09 WARN  UserDAOImpl:70 - Unable to retrieve the account
+org.postgresql.util.PSQLException: The column name pin_number was not found in this ResultSet.
+	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2607)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2498)
+	at com.revature.repositories.AccountDAOImpl.getAccountById(AccountDAOImpl.java:63)
+	at com.revature.services.AccountServices.getAccountById(AccountServices.java:20)
+	at com.revature.Driver.transfer(Driver.java:394)
+	at com.revature.Driver.logIn(Driver.java:163)
+	at com.revature.Driver.start(Driver.java:56)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-16 14:34:33 WARN  UserDAOImpl:41 - Unable to retrieve all accounts
+org.postgresql.util.PSQLException: The column name account_number was not found in this ResultSet.
+	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2607)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2498)
+	at com.revature.repositories.AccountDAOImpl.getAllAccounts(AccountDAOImpl.java:32)
+	at com.revature.services.AccountServices.getAllAccounts(AccountServices.java:14)
+	at com.revature.Driver.seeDetailsAboutUsers(Driver.java:197)
+	at com.revature.Driver.logIn(Driver.java:166)
+	at com.revature.Driver.start(Driver.java:56)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-16 15:05:03 WARN  UserDAOImpl:41 - Unable to retrieve all accounts
+org.postgresql.util.PSQLException: The column name pin_number was not found in this ResultSet.
+	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2607)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2498)
+	at com.revature.repositories.AccountDAOImpl.getAllAccounts(AccountDAOImpl.java:34)
+	at com.revature.services.AccountServices.getAllAccounts(AccountServices.java:14)
+	at com.revature.Driver.seeDetailsAboutUsers(Driver.java:202)
+	at com.revature.Driver.logIn(Driver.java:171)
+	at com.revature.Driver.start(Driver.java:61)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-16 15:34:56 WARN  UserDAOImpl:124 - Unable to update the user's account
+org.postgresql.util.PSQLException: ERROR: column "pin_number" of relation "account" does not exist
+  Position: 62
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.AccountDAOImpl.updateAccount(AccountDAOImpl.java:120)
+	at com.revature.services.AccountServices.updateAccount(AccountServices.java:28)
+	at com.revature.Driver.giveOptionsToModifyAccounts(Driver.java:255)
+	at com.revature.Driver.seeDetailsAboutUsers(Driver.java:207)
+	at com.revature.Driver.logIn(Driver.java:171)
+	at com.revature.Driver.start(Driver.java:61)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-16 15:35:49 WARN  UserDAOImpl:124 - Unable to update the user's account
+org.postgresql.util.PSQLException: ERROR: column "pin_number" of relation "account" does not exist
+  Position: 62
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.AccountDAOImpl.updateAccount(AccountDAOImpl.java:120)
+	at com.revature.services.AccountServices.updateAccount(AccountServices.java:28)
+	at com.revature.Driver.giveOptionsToModifyAccounts(Driver.java:263)
+	at com.revature.Driver.seeDetailsAboutUsers(Driver.java:207)
+	at com.revature.Driver.logIn(Driver.java:171)
+	at com.revature.Driver.start(Driver.java:61)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-16 15:36:30 WARN  UserDAOImpl:124 - Unable to update the user's account
+org.postgresql.util.PSQLException: ERROR: column "pin_number" of relation "account" does not exist
+  Position: 62
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.AccountDAOImpl.updateAccount(AccountDAOImpl.java:120)
+	at com.revature.services.AccountServices.updateAccount(AccountServices.java:28)
+	at com.revature.Driver.giveOptionsToModifyAccounts(Driver.java:263)
+	at com.revature.Driver.seeDetailsAboutUsers(Driver.java:207)
+	at com.revature.Driver.logIn(Driver.java:171)
+	at com.revature.Driver.start(Driver.java:61)
+	at com.revature.Driver.main(Driver.java:19)
+2019-12-16 15:37:48 WARN  UserDAOImpl:124 - Unable to update the user's account
+org.postgresql.util.PSQLException: ERROR: column "pin_number" of relation "account" does not exist
+  Position: 62
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.AccountDAOImpl.updateAccount(AccountDAOImpl.java:120)
+	at com.revature.services.AccountServices.updateAccount(AccountServices.java:28)
+	at com.revature.Driver.giveOptionsToModifyAccounts(Driver.java:271)
+	at com.revature.Driver.seeDetailsAboutUsers(Driver.java:207)
+	at com.revature.Driver.logIn(Driver.java:171)
+	at com.revature.Driver.start(Driver.java:61)
+	at com.revature.Driver.main(Driver.java:19)
