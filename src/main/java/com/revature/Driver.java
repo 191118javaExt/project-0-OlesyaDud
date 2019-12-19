@@ -24,15 +24,15 @@ public class Driver {
 //-----------------------------------------------------------------------------options to be checked
 				private static void giveOptions() {
 					System.out.println();
-					System.out.println("Welcome to Our Bank!");
+					System.out.println("Welcome to X Bank!");
 					System.out.println("100% U.S. Based Customer Service!");
 					System.out.println("*----------------------*");
 					System.out.println();
 					System.out.println("Please choose from the following options:");
 					System.out.println();
 					System.out.println("1. Enter [1] if you are a New User");
-					System.out.println("2. Enter [2] if you are a Existing User");
-					System.out.println("3. Enter [3] if you are a to Exit");
+					System.out.println("2. Enter [2] if you are an Existing User");
+					System.out.println("3. Enter [3] if you want to Exit");
 					System.out.println();		
 	}
 				
@@ -108,9 +108,10 @@ public class Driver {
 			Account acc = as.getAccountBYPinNumber(pin);
 			return new User(0, fname, lname,  password, acc.getId(), employee, admin, false);
 		}
-//		???
+
 		
 //		-------------------------------------
+//		method to get users from DB
 		
 		private static  User getUserFromDB() {
 			String fname;
@@ -135,16 +136,16 @@ public class Driver {
 				if(u != null) {		
 					flag = true;	
 				} else {
-					System.out.println("User not found:"); //  ?
+					System.out.println("User not found:"); 
 					flag = false;
 				}
 			return flag;
 		}
 
-//		log in 
+//
 		private static void logIn(User user) {
 			System.out.println();
-			System.out.println("Welcome " + user.getFname() + "!");
+			System.out.println("Welcome, " + user.getFname() + "!");
 			System.out.println("Please, choose from the following options: ");
 			
 			while(true) {
@@ -155,7 +156,7 @@ public class Driver {
 				
 				switch(choice) {
 				case 0:
-					System.out.println("Thank you for visiting.");
+					System.out.println("Have a nice day!");
 					System.exit(0);
 					break;
 				case 1:
@@ -176,7 +177,7 @@ public class Driver {
 			}
 		}
 
-//		user details :
+//		Admin/Employee access
 		private static void seeDetailsAboutUsers(User u) {
 			System.out.println("You must be Admin/Employee to access Users' Accounts.");
 			System.out.println();
@@ -223,7 +224,7 @@ public class Driver {
 		}
 
 
-//options:
+//options to modify account
 		
 		private static void giveOptionsToModifyAccounts(User u) {
 			System.out.println("Enter Account Id.");
@@ -253,7 +254,7 @@ public class Driver {
 					int accountNumber = ensureIntegerInput();
 					a.setAccountNumber(accountNumber);
 					as.updateAccount(a);
-					System.out.println("Account's Account Number is changed.");
+					System.out.println("Account Number is changed.");
 					break;
 					
 				case 2:
@@ -261,7 +262,7 @@ public class Driver {
 					double balance = ensureDoubleInput();
 					a.setBalance(balance);
 					as.updateAccount(a);
-					System.out.println("Account's Balance is changed.");
+					System.out.println("Account Balance is changed.");
 					break;
 
 				case 3:
@@ -269,18 +270,18 @@ public class Driver {
 					int pinNumber = ensureIntegerInput();
 					a.setPinNumber(pinNumber);
 					as.updateAccount(a);
-					System.out.println("Account's Pin Number is changed.");
+					System.out.println("Account Pin Number is changed.");
 					break;
 
 				default:
-					System.out.println("There no option for your input, Please try again.");
+					System.out.println("Invalid input. Please try again.");
 					break;
 				}
 			}
 			
 		}
 
-//=======================modifying ...
+//=======================modify users ...
 		
 		private static void giveOptionsToModifyUsers(User u) {
 			System.out.println("Enter user id to modify the user information.");
@@ -369,29 +370,62 @@ public class Driver {
 //===================================!!!
 
 		private static void deposit(User u) { //---------------deposit
-			System.out.println("Deposit Ammount:");
+			System.out.println("Enter Amount You Want to Deposit:");
 			double amount = ensureDoubleInput();
 			Account a = us.getUserAccount(u);
 			as.updateBalanceOfAccount(a, amount);
-			System.out.println("Deposited successfully!: " +amount );
+			System.out.println(amount + "$ deposited successfully!: ");
 		}
 
+//		private static void withdraw(User u) { //-------------withdraw
+//			System.out.println("Enter Amount You Want to withdraw :");
+//			double amount = ensureDoubleInput();
+//			Account a = us.getUserAccount(u);
+//			if(a.getBalance() < amount) {
+//				System.out.println("Insufficient funds to perform this action");
+//			}else {
+//				as.updateBalanceOfAccount(a, (-1*amount));
+//			}
+//			System.out.println(amount + "withdrawn successfully! ");
+//		}
+		
 		private static void withdraw(User u) { //-------------withdraw
-			System.out.println("Withdraw Ammount:");
+			System.out.println("Enter Amount You Want to withdraw :");
 			double amount = ensureDoubleInput();
 			Account a = us.getUserAccount(u);
+			
 			if(a.getBalance() < amount) {
-				System.out.println("Insufficient funds to perform this action");
+				System.out.println("Insufficient funds to perform this action. Please choose from the following options:");
+			}else if(a.getBalance() >= amount){
+				System.out.println(amount + " withdrawn successfully!");
 			}else {
 				as.updateBalanceOfAccount(a, (-1*amount));
 			}
-			System.out.println("Ammount withdrawn successfully! " +amount );
+
+//			System.out.println(amount + "withdrawn successfully! ");
 		}
 
 
 		private static void transfer(User u) {  //----------------transfer
 			
-			System.out.println("Transfer ammount:");
+//			System.out.println("Transfer ammount:");
+//			double amount = ensureDoubleInput();
+//			
+//			System.out.println("Enter the account id of the account to which you want to transfer:");
+//			int pinNumber = ensureIntegerInput();
+//			
+//			Account anotherAccount = as.getAccountById(pinNumber);
+//			Account userAccount = us.getUserAccount(u);
+//			
+//			if(userAccount.getBalance() < amount) {
+//				System.out.println("Insufficient funds to perform this action. Transaction failed");
+//			} else {
+//				as.updateBalanceOfAccount(userAccount, (-1*amount));
+//			}
+//			System.out.println("Transfered successfully " + amount);
+//		}
+			
+			System.out.println("Transfer amount:");
 			double amount = ensureDoubleInput();
 			
 			System.out.println("Enter the account id of the account to which you want to transfer:");
@@ -401,12 +435,15 @@ public class Driver {
 			Account userAccount = us.getUserAccount(u);
 			
 			if(userAccount.getBalance() < amount) {
-				System.out.println("Insufficient funds to perform this action.");
-			} else {
+				System.out.println("Insufficient funds to perform this action. Transaction failed");
+			} else if(userAccount.getBalance() >= amount) {
+				System.out.println("Transfered successfully " + amount);
+			}else {
 				as.updateBalanceOfAccount(userAccount, (-1*amount));
 			}
-			System.out.println("Transfered" +amount + " to account number " + anotherAccount.getAccountNumber() );
+//			System.out.println("Transfered successfully " + amount);
 		}
+
 
 
 //====================================

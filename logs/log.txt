@@ -517,3 +517,12 @@ org.postgresql.util.PSQLException: ERROR: column "pin_number" of relation "accou
 	at com.revature.Driver.logIn(Driver.java:171)
 	at com.revature.Driver.start(Driver.java:61)
 	at com.revature.Driver.main(Driver.java:19)
+2019-12-17 16:35:30 WARN  UserDAOImpl:308 - No such user exists.
+org.postgresql.util.PSQLException: The column name account_id was not found in this ResultSet.
+	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2607)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2498)
+	at com.revature.repositories.UserDAOImpl.getUserByFnameAndPassword(UserDAOImpl.java:297)
+	at com.revature.services.UserService.getUserByFnameAndPassword(UserService.java:45)
+	at com.revature.Driver.getUserFromDB(Driver.java:127)
+	at com.revature.Driver.start(Driver.java:58)
+	at com.revature.Driver.main(Driver.java:19)
